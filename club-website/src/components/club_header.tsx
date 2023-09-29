@@ -1,5 +1,7 @@
 function Club_Header() {
-    return <h1>Welcome To The CLU Computer Science Club Website</h1>;
+    return <div className="club-header">
+        <h1>Computer Science Club</h1>
+    </div>
 }
 
 export default Club_Header;

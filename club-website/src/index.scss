@@ -7,14 +7,57 @@ html, body, .page-wrapper {
   line-height: 1.1;
 } */
 
-.nav-bar {
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav-container {
+  background-color: #3B2360;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 45px;
   }
 
-  li {
-    display: inline;
+  .nav-bar {
+    background-color: #3B2360;
+    height: 100px;
+    width: 1230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: 40px;
+    }
+
+    li {
+      color: white;
+      display: inline;
+      font-family: "Raleway";
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 40px;
+      height: 100%;
+      padding: 0px 15px;
+    }
+  }
+}
+
+.club-header {
+  background-image: url(https://sites.callutheran.edu/tug-programs/wp-content/uploads/sites/21/2021/03/computer-science-large.jpg);
+  background-position: center center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: white;
+    font-family: "Raleway",Helvetica,Arial,sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1em;
   }
 }
