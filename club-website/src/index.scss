@@ -26,9 +26,9 @@ html, body, .page-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      img {
+      a {
         height: 45px;
+        display:flex;
       }
   
       h2 {
