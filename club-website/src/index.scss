@@ -2,6 +2,8 @@ $clu-purple: #3B2360;
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html, body, .page-wrapper {
@@ -80,5 +82,40 @@ html, body, .page-wrapper {
     font-weight: 700;
     line-height: normal;
     position: absolute;
+  }
+}
+
+.content-card {
+  background-color: #3e3e42;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px 40px 0px;
+
+  .content {
+    background-color: #1e1e1e;
+    width: 1230px;
+    display: flex;
+    color: white;
+
+    // img {
+    //   max-width: 100;
+    //   max-height: 100;
+    // }
+
+    .info {
+      h3 {
+        font-family: "Raleway";
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+      }
+
+      p {
+        font-family: "Courier";
+        font-size: 1.3em;
+        padding: 0px 40px 0px 40px;
+      }
+    }
   }
 }
