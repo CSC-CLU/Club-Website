@@ -1,61 +1,36 @@
-import {useEffect, useState} from 'react';
+function Content() {
+    const content = [
+        "src/assets/demo_img.png", "Project Title 1", "Short Description 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "src/assets/demo_img.png", "Project Title 2", "Short Description 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "src/assets/demo_img.png", "Project Title 3", "Short Description 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    ];
 
-interface ContentItem {
-    image: string;
-    title: string;
-    description: string;
-}
+    let image: string = "";
+    let title: string = "";
+    let descritpion: string = "";
+    let content_list = [];
 
-async function fetchData() {
-    const content_file = "../home_content.txt";
-    const response = await fetch(content_file);
-    return await response.text();
-}
+    for (let i = 0; i < content.length; i += 3) {
+        image = content[i];
+        title = content[i + 1];
+        descritpion = content[i + 2];
 
-function ContentCard({image, title, description}: ContentItem) {
-    return (
-        <div className="content-card">
-            <div className="content">
-                <img width="300" height="300" src={image} alt="project-image"/>
+        content_list.push(
+            <div className="content-card">
+                <img src={image}></img>
                 <div className="info">
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <p>{descritpion}</p>
                 </div>
             </div>
-        </div>
-    );
-}
-
-function Content() {
-    const [content, setContent] = useState<ContentItem[]>([]);
-
-    useEffect(() => {
-        async function fetchDataAndSetContent() {
-            const content_string = await fetchData();
-            const content_array = content_string.split("\n");
-            const content_objects: ContentItem[] = [];
-
-            for (let i = 0; i < content_array.length; i += 3) {
-                const image = content_array[i];
-                const title = content_array[i + 1];
-                const description = content_array[i + 2];
-
-                content_objects.push({image, title, description});
-            }
-
-            setContent(content_objects);
-        }
-
-        fetchDataAndSetContent();
-    }, []);
+        )
+    }
 
     return (
         <div className="content">
-            {content.map((item, index) => (
-                <ContentCard key={index} image={item.image} title={item.title} description={item.description}></ContentCard>
-            ))}
+            {content_list}
         </div>
-    );
+    )
 }
 
 export default Content;

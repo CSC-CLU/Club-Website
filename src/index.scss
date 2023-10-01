@@ -16,8 +16,8 @@ $secondary-color: #1e1e1e;
 
   .nav-bar {
     background-color: $clu-purple;
-    height: 100px;
     width: 1230px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,55 +62,68 @@ $secondary-color: #1e1e1e;
   }
 }
 
-.club-header {
-  background-image: url(https://sites.callutheran.edu/tug-programs/wp-content/uploads/sites/21/2021/03/computer-science-large.jpg);
-  background-position: center center;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .image-overlay {
-    background-color: rgba(0,0,0,.5);
-    width: 100%;
-    height: 100%;
-  }
-
-  h1 {
-    color: white;
-    font-family: "Raleway",Helvetica,Arial,sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: normal;
-    position: absolute;
-  }
-}
-
-.content-card {
+.home-page {
   background-color: $primary-color;
   display: flex;
   justify-content: center;
-  padding: 40px 0px 40px 0px;
+  flex-wrap: wrap;
+
+  .club-header {
+    background-image: url(https://sites.callutheran.edu/tug-programs/wp-content/uploads/sites/21/2021/03/computer-science-large.jpg);
+    background-position: center center;
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .image-overlay {
+      background-color: rgba(0,0,0,.5);
+      width: 100%;
+      height: 100%;
+    }
+  
+    h1 {
+      color: white;
+      font-family: "Raleway",Helvetica,Arial,sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+    }
+  }
 
   .content {
-    background-color: $secondary-color;
+    background-color: $primary-color;
     width: 1230px;
-    display: flex;
-    color: white;
 
-    .info {
-      h3 {
-        font-family: "Raleway";
-        font-size: 26px;
-        font-weight: 700;
-        text-align: center;
-        padding: 20px;
+    .content-card {
+      background-color: $secondary-color;
+      color: white;
+      margin: 40px 0px 40px 0px;
+      display: flex;
+
+      img {
+        width: 300px;
+        height: 300px;
       }
 
-      p {
-        font-family: "Courier";
-        font-size: 1.3em;
-        padding: 0px 40px 0px 40px;
+      .info {
+        width: 100%;
+        
+        h3 {
+          font-family: "Raleway";
+          font-size: 26px;
+          font-weight: 700;
+          text-align: center;
+          padding: 20px;
+        }
+
+        p {
+          font-family: "Courier";
+          font-size: 1.3em;
+          padding: 0px 40px 0px 40px;
+        }
       }
     }
   }
