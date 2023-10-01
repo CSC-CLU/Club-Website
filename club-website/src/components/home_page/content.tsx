@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 interface ContentItem {
     image: string;
@@ -7,17 +7,16 @@ interface ContentItem {
 }
 
 async function fetchData() {
-    const content_file = "home_content.txt";
+    const content_file = "../home_content.txt";
     const response = await fetch(content_file);
-    const return_data = await response.text();
-    return return_data;
+    return await response.text();
 }
 
 function ContentCard({image, title, description}: ContentItem) {
     return (
         <div className="content-card">
             <div className="content">
-                <img width="300" height="300" src={image} alt="project-image" />
+                <img width="300" height="300" src={image} alt="project-image"/>
                 <div className="info">
                     <h3>{title}</h3>
                     <p>{description}</p>
@@ -41,11 +40,7 @@ function Content() {
                 const title = content_array[i + 1];
                 const description = content_array[i + 2];
 
-                content_objects.push({
-                    image,
-                    title,
-                    description,
-                });
+                content_objects.push({image, title, description});
             }
 
             setContent(content_objects);
@@ -57,12 +52,7 @@ function Content() {
     return (
         <div className="content">
             {content.map((item, index) => (
-                <ContentCard
-                    key={index}
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                />
+                <ContentCard key={index} image={item.image} title={item.title} description={item.description}></ContentCard>
             ))}
         </div>
     );

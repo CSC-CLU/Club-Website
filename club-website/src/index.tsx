@@ -1,13 +1,22 @@
-import Navigation_Bar from './nav_bar';
-import Club_Header from './components/home_page/header';
-import Content from './components/home_page/content';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"; // Note the use of `Routes` instead of `Switch`
+import Home from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import Navigation_Bar from "./components/nav_bar";
 
 function App() {
-  return <div className="page-wrapper">
-      <Navigation_Bar></Navigation_Bar>
-      <Club_Header></Club_Header>
-      <Content></Content>
-    </div>
+    return (
+        <div className="page-wrapper">
+            <Router>
+                <Navigation_Bar></Navigation_Bar>
+                <Routes>
+                    <Route path="/home" element={<Home></Home>}></Route>
+                    <Route path="/about" element={<About></About>}></Route>
+                    <Route path="/contact" element={<Contact></Contact>}></Route>
+                </Routes>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

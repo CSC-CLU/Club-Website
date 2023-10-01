@@ -1,12 +1,10 @@
 $clu-purple: #3B2360;
+$primary-color: #3e3e42;
+$secondary-color: #1e1e1e;
 
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
-}
-
-html, body, .page-wrapper {
   margin: 0;
 }
 
@@ -45,17 +43,20 @@ html, body, .page-wrapper {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      height: 40px;
+      display: flex;
+      
+      a {
+          background-color: rgba(0, 0, 0, 0);
+          color: white;
+          font-family: "Raleway";
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 40px;
+          padding: 0px 15px 0px 15px;
+      }
 
-      li {
-        color: white;
-        display: inline;
-        font-family: "Raleway";
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 40px;
-        height: 100%;
-        padding: 0px 15px;
+      :last-child {
+        margin-right: -40px;
       }
     }
   }
@@ -86,21 +87,16 @@ html, body, .page-wrapper {
 }
 
 .content-card {
-  background-color: #3e3e42;
+  background-color: $primary-color;
   display: flex;
   justify-content: center;
   padding: 40px 0px 40px 0px;
 
   .content {
-    background-color: #1e1e1e;
+    background-color: $secondary-color;
     width: 1230px;
     display: flex;
     color: white;
-
-    // img {
-    //   max-width: 100;
-    //   max-height: 100;
-    // }
 
     .info {
       h3 {
