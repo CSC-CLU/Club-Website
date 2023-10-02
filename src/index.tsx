@@ -8,7 +8,6 @@ import Project_Paths from "./components/project_page/content/project_paths";
 
 function App() {
     let project_routes: any[] = [];
-    console.log(Project_Paths);
     for (let i = 0; i < Project_Paths.length; i++) {
         project_routes.push (
             <Route path={Project_Paths[i]} element={<Project></Project>}></Route>
