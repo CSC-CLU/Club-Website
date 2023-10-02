@@ -2,6 +2,9 @@ $clu-purple: #3B2360;
 $primary-color: #3e3e42;
 $secondary-color: #1e1e1e;
 
+$base-padding: 40px;
+$max-width: 1230px;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,7 +19,7 @@ $secondary-color: #1e1e1e;
 
   .nav-bar {
     background-color: $clu-purple;
-    width: 1230px;
+    width: $max-width;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -51,7 +54,7 @@ $secondary-color: #1e1e1e;
           font-family: "Raleway";
           font-size: 17px;
           font-weight: 700;
-          line-height: 40px;
+          line-height: $base-padding;
           padding: 0px 15px 0px 15px;
       }
 
@@ -95,12 +98,12 @@ $secondary-color: #1e1e1e;
 
   .content {
     background-color: $primary-color;
-    width: 1230px;
+    width: $max-width;
 
     .content-card {
       background-color: $secondary-color;
       color: white;
-      margin: 40px 0px 40px 0px;
+      margin: $base-padding 0px $base-padding 0px;
       display: flex;
 
       a {
@@ -134,7 +137,7 @@ $secondary-color: #1e1e1e;
         p {
           font-family: "Courier";
           font-size: 1.3em;
-          padding: 0px 40px 0px 40px;
+          padding: 0px $base-padding 0px $base-padding;
         }
       }
     }
@@ -142,7 +145,60 @@ $secondary-color: #1e1e1e;
 }
 
 .project-page {
-  h3 {
-    color: black;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    background-color: $secondary-color;
+    width: $max-width;
+
+    h3 {
+      color: white;
+      font-family: "Raleway";
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      padding: $base-padding;
+      width: 100%;
+    }
+
+    .youtube-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: $base-padding / 2;
+
+      iframe{
+        border: none;
+        width: 66%;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: $base-padding / 2;
+
+      img {
+        width: 66%;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    .text-container {
+      width: 100%; 
+      display: flex;
+      justify-content: center;
+      p {
+        color: white;
+        font-family: "Courier";
+        font-size: 1.3em;
+        padding: $base-padding / 2;
+        width: 80%;
+      }
+    }
   }
 }
