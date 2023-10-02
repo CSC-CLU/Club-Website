@@ -1,29 +1,31 @@
+import React, { useEffect } from "react";
+import {Link} from "react-router-dom";
+import Projects from "./content/projects";
+
 function Content() {
-    const content = [
-        "src/assets/demo_img.png", "Project Title 1", "Short Description 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "src/assets/demo_img.png", "Project Title 2", "Short Description 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "src/assets/demo_img.png", "Project Title 3", "Short Description 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    ];
+    let content_list: any[] = [];
 
-    let image: string = "";
-    let title: string = "";
-    let descritpion: string = "";
-    let content_list = [];
-
-    for (let i = 0; i < content.length; i += 3) {
-        image = content[i];
-        title = content[i + 1];
-        descritpion = content[i + 2];
+    for (let i = 0; i < Projects.length; i += 3) {
+        const image: string = Projects[i];
+        const title: string = Projects[i + 1];
+        const descritpion: string = Projects[i + 2];
+        const path: string = "/" + title.replace(/\s/g, "-");
 
         content_list.push(
             <div className="content-card">
-                <img src={image}></img>
+                <Link to={path}>
+                    <img src={image} alt={title}></img>
+                </Link>
                 <div className="info">
-                    <h3>{title}</h3>
+                    <h3>
+                        <Link to={path}>
+                            {title}
+                        </Link>
+                    </h3>
                     <p>{descritpion}</p>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
