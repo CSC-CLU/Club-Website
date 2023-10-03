@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
 import {Link} from "react-router-dom";
-import Projects from "./content/projects";
+import Projects_Content from "../../content/projects_content";
 
 function Content() {
     let content_list: any[] = [];
 
-    for (let i = 0; i < Projects.length; i += 3) {
-        const image: string = Projects[i];
-        const title: string = Projects[i + 1];
-        const descritpion: string = Projects[i + 2];
-        const path: string = "/" + title.replace(/\s/g, "-");
+    for (let i = 0; i < Projects_Content.length; i++) {
+        const path: string = "/" + Projects_Content[i][1][1].replace(/\s/g, "-");
+        
+        const image: string = Projects_Content[i][0][0];
+        const title: string = Projects_Content[i][0][1];
+        const descritpion: string = Projects_Content[i][0][1];
 
         content_list.push(
             <div className="content-card">
