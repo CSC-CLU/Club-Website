@@ -9,7 +9,7 @@ function Content() {
         
         const image: string = Projects_Content[i][0][0];
         const title: string = Projects_Content[i][0][1];
-        const description: string = Projects_Content[i][0][1];
+        const description: string = Projects_Content[i][0][2];
 
         content_list.push(
             <div className="content-card">
