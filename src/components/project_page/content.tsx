@@ -2,8 +2,7 @@ import Projects_Content from "../../content/projects_content";
 
 function Content() {
     let url: string = window.location.pathname;
-    console.log(url);
-
+    
     let content: string[] = [];
     for (let i = 0; i < Projects_Content.length; i++) {
         if ("/" + Projects_Content[i][1][1].replace(/\s/g, "-") == url) {

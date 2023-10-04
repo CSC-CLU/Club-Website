@@ -9,11 +9,11 @@ function Content() {
         
         const image: string = Projects_Content[i][0][0];
         const title: string = Projects_Content[i][0][1];
-        const descritpion: string = Projects_Content[i][0][1];
+        const description: string = Projects_Content[i][0][1];
 
         content_list.push(
             <div className="content-card">
-                <Link to={path}>
+                <Link to={path }>
                     <img src={image} alt={title}></img>
                 </Link>
                 <div className="info">
@@ -22,7 +22,7 @@ function Content() {
                             {title}
                         </Link>
                     </h3>
-                    <p>{descritpion}</p>
+                    <p>{description}</p>
                 </div>
             </div>
         );

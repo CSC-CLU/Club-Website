@@ -1,9 +1,9 @@
-import Test from '../components/about_page/test_component'
+import Header from '../components/about_page/header'
 
 function About() {
     return (
         <div className="about-page">
-            <Test></Test>
+            <Header></Header>
         </div>
     );
 }

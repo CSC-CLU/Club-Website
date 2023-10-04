@@ -1,11 +1,11 @@
 function Header() {
     return (
-        <div className="club-header">
+        <div className="about-header">
             <div className="image-overlay">
-                <h1>Computer Science Club</h1>
+                <h1>About Us</h1>
             </div>
         </div>
-    );
+    )
 }
 
 export default Header;
