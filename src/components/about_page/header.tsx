@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <div className="about-header">
+        <div className="header">
             <div className="image-overlay">
                 <h1>About Us</h1>
             </div>

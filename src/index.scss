@@ -4,6 +4,8 @@ $secondary-color: #1e1e1e;
 
 $base-padding: 40px;
 $max-width: 1230px;
+$h1-font-size: 3.5rem;
+$paragraph-font-size: 1.3em;
 
 * {
   box-sizing: border-box;
@@ -75,11 +77,11 @@ html {
   justify-content: center;
   flex-wrap: wrap;
 
-  .club-header {
+  .header {
     background-image: url(https://sites.callutheran.edu/tug-programs/wp-content/uploads/sites/21/2021/03/computer-science-large.jpg);
     background-position: center center;
-    height: 400px;
     width: 100vw;
+    height: 400px;
   
     .image-overlay {
       background-color: rgba(0,0,0,.5);
@@ -92,7 +94,7 @@ html {
       h1 {
         color: white;
         font-family: "Raleway",Helvetica,Arial,sans-serif;
-        font-size: 3.5rem;
+        font-size: $h1-font-size;
         font-weight: 700;
         line-height: normal;
       }
@@ -138,7 +140,8 @@ html {
         }
 
         p {
-          font-family: "Courier";
+          // font-family: "Courier";
+          font-family: "Raleway";
           font-size: 1.3em;
           padding: 0px $base-padding 0px $base-padding;
         }
@@ -197,7 +200,8 @@ html {
       justify-content: center;
       p {
         color: white;
-        font-family: "Courier";
+        // font-family: "Courier";
+        font-family: "Raleway";
         font-size: 1.3em;
         padding: calc($base-padding / 2);
         width: 80%;
@@ -207,8 +211,14 @@ html {
 }
 
 .about-page {
-  .about-header {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .header {
     background-image:url(https://www.mtu.edu/business/undergraduate/organizations/student-organizations/finance-club/images/finance-club-banner1200.jpg);
+    width: 100vw;
     height: 400px;
 
     .image-overlay {
@@ -222,10 +232,47 @@ html {
       h1 {
         color: white;
         font-family: "Raleway",Helvetica,Arial,sans-serif;
-        font-size: 3.5rem;
+        font-size: $h1-font-size;
         font-weight: 700;
         line-height: normal;
       }
+    }
+  }
+
+  .introduction {
+    width: $max-width;
+
+    .card-1, .card-2 {
+      padding: $base-padding 0px $base-padding 0px;
+      display: flex;
+    }
+
+    .card-1 {
+      background-color: $secondary-color;
+    }
+
+    .card-2 {
+      background-color: $clu-purple;
+    }
+
+    img, iframe {
+      padding: calc($base-padding / 2);
+      width: 50%;
+    }
+
+    iframe {
+      border: none;
+      aspect-ratio: calc(16/9);
+    }
+
+    p {
+      color: white;
+      font-family: "Raleway";
+      font-size: 1.3em;
+      padding: $base-padding;
+      width: 50%;
+      display: flex;
+      align-items: center;
     }
   }
 }
