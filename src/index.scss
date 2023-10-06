@@ -112,7 +112,7 @@ html {
         .apply-button {
           background: #ffd589;
           color: #6a4c92;
-          font-family: "Tungsten",sans-serif;
+          font-family: "Tungsten",impact, sans-serif;
           font-size: 1.5rem;
           font-weight: 100;
           line-height: 1em;
@@ -168,16 +168,23 @@ html {
     }
 
     .bottom-row {
-      background-color: lightslategray;
-      display: flex;
+      border-top: 4px solid #6a4c92;
+      padding: 2rem 0 0 0;
 
+      p {
+        color: white;
+        font-family: "Raleway", Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        line-height: 1.5em;
+        padding: 0 0 1em 0;
+      }
+      
       ul {
-        width: $max-width;
         list-style-type:none;
+        display: flex;
+        justify-content: space-between;
 
         li {
-          background-color: red;
-          justify-content: space-between;
 
           a {
             color: $clu-gold;
@@ -186,6 +193,9 @@ html {
             line-height: 1.5em;
             list-style: none;
             text-decoration: none;
+          }
+          a:hover {
+            text-decoration: underline;
           }
         }
       }
