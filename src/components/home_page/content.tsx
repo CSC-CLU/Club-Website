@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Projects_Content from "../../content/projects_content";
+import Projects_Content from "../../../content/projects_content";
 
 function Content() {
     let content_list: any[] = [];
