@@ -11,12 +11,14 @@ function Footer() {
                             Thousand Oaks, CA 91360
                         </address>
                         <p className="phone-number">(805) 492-2411</p>
-                        <a href="https://www.callutheran.edu/admission/apply.html" className="apply-button">APPLY ONLINE</a>
+                        <div className="apply-button">
+                            <a href="https://www.callutheran.edu/admission/apply.html">APPLY ONLINE</a>
+                        </div>
                         <div className="campus-buttons">
                             <a href="https://www.callutheran.edu/tour/">VIRTUAL TOUR</a>
                             <a href="https://www.callutheran.edu/admission/visit.html">VISIT CAMPUS</a>
                         </div>
-                        <a href="https://www.callutheran.edu/about/campus-locations.html">View all campus locations</a>
+                        <a href="https://www.callutheran.edu/about/campus-locations.html" className="campus-locations">View all campus locations</a>
                         <ul className="social-medias">
                             <li><a href="https://www.facebook.com/callutheran" className="facebook"></a></li>
                             <li><a href="https://twitter.com/callutheran" className="twitter"></a></li>

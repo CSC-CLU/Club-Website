@@ -1,7 +1,10 @@
 $clu-purple: #3b2360;
-$clu-gold: #ffc222;
-$primary-color: #3e3e42;
-$secondary-color: #1e1e1e;
+$clu-light-purple: #6a4c92;
+$clu-gold: #ffcb08;
+$clu-light-gold: #fcf4e0;
+// $primary-color: #3e3e42;
+$primary-color: #3e3739;
+$secondary-color: #231f20;
 
 $base-padding: 40px;
 $max-width: 1230px;
@@ -64,6 +67,10 @@ html {
           font-weight: 700;
           line-height: $base-padding;
           padding: 0px 15px 0px 15px;
+          text-decoration: none;
+      }
+      a:hover {
+        color: $clu-gold;
       }
 
       :last-child {
@@ -81,10 +88,11 @@ html {
   justify-content: center;
 
   .footer {
-    padding: 48px 0px 48px 0px;
-    width: $max-width;
+    padding: 3rem 12px;
+    width: 1170px;
 
     .columns {
+      padding: 0px -12px;
       display: flex;
       justify-content: space-between;
 
@@ -110,21 +118,57 @@ html {
         }
 
         .apply-button {
-          background: #ffd589;
-          color: #6a4c92;
-          font-family: "Tungsten",impact, sans-serif;
-          font-size: 1.5rem;
-          font-weight: 100;
-          line-height: 1em;
-          letter-spacing: 0px;
-          text-align: center;
+          padding: 0 0 1em 0;
+
+          a {
+            background: #ffd589;
+            border: 1px solid rgba(0,0,0,.3);
+            border-radius: 5px;
+            box-shadow: 0 5px 5px -5px rgba(0,0,0,.75);
+            color: $clu-light-purple;
+            font-family: "Tungsten",impact, sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0px;
+            line-height: 1em;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: 50ms ease-in-out all;
+            display: inline-block;
+          }
+        }
+
+        .campus-buttons{
+          padding: 0 0 1em 0;
+
+          a{
+            color: white;
+            font-size: 1.125rem;
+            padding: 0.25rem 0.5rem;
+            font-family: "Tungsten",Impact,sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1em;
+            text-align: center;
+            background: #6a4c92;
+            border-radius: 5px;
+            border: 1px solid rgba(0,0,0,.3);
+            box-shadow: 0 5px 5px -5px rgba(0,0,0,.75);
+            transition: 50ms ease-in-out all;
+            display: inline-block;
+          }
+        }
+
+        .campus-locations {
+          color: $clu-gold;
+          font-family: "Raleway";
+          font-weight: bold;
+          font-size: $small-text-px;
           text-decoration: none;
-          padding: 0.5rem 1rem;
-          border-radius: 5px;
-          border: 1px solid rgba(0,0,0,.3);
-          box-shadow: 0 5px 5px -5px rgba(0,0,0,.75);
-          transition: 50ms ease-in-out all;
-          display: inline-block;
+        }
+        .campus-locations:hover {
+          text-decoration: underline;
         }
 
         .social-medias {
@@ -168,7 +212,7 @@ html {
     }
 
     .bottom-row {
-      border-top: 4px solid #6a4c92;
+      border-top: 4px solid $clu-light-purple;
       padding: 2rem 0 0 0;
 
       p {
@@ -234,7 +278,6 @@ html {
   }
 
   .content {
-    background-color: $primary-color;
     width: $max-width;
 
     .content-card {
@@ -372,23 +415,24 @@ html {
   }
 
   .introduction {
+    padding: 40px 0px;
     width: $max-width;
 
-    .card-1, .card-2 {
-      padding: $base-padding 0px $base-padding 0px;
+    .card-1, .card-2, .card-3, .card-4 {
+      padding: $base-padding 0px;
       display: flex;
     }
 
-    .card-1 {
+    .card-1, .card-3 {
       background-color: $secondary-color;
     }
 
-    .card-2 {
+    .card-2, .card-4 {
       background-color: $clu-purple;
     }
 
     img, iframe {
-      margin: $base-padding;
+      margin: calc($base-padding / 2);
       width: 50%;
     }
 
@@ -401,10 +445,40 @@ html {
       color: white;
       font-family: "Raleway";
       font-size: $small-text-em;
-      margin: $base-padding;
+      margin: calc($base-padding / 2);
       width: 50%;
       display: flex;
       align-items: center;
+    }
+  }
+
+  .content {
+    padding: 0 0 40px 0;
+    width: $max-width;
+    display: flex;
+
+    .profile {
+      background-color: $clu-light-gold;
+      border-radius: 100vh;
+      padding: 10px;
+      display: flex;
+
+      .left {
+        align-self: center;
+        
+        .profile-image {
+          background-color: red;
+          aspect-ratio: calc(1/1);
+          border-radius: 50%;
+          overflow: hidden;
+          width: 100px;
+        }
+      }
+
+      .right {
+        padding: 0 $base-padding 0 $base-padding;
+        align-self: top;
+      }
     }
   }
 }
