@@ -435,28 +435,33 @@ html {
 
   .content {
     width: $max-width;
+    padding-bottom: 50px;
 
     .content-card{
       padding: $base-padding 0px $base-padding 0px;
       display: flex;
       background-color: white;
-
+      
     }
 
-    img {
-      padding: calc($base-padding / 2);
-      width: 100%;
-      border: 10px solid $light-clu-purple;
+    .image-container{
+      padding: 0 0 0 20px;
+      
+        img {
+        padding: calc($base-padding / 2);
+        width: 100%;
+        border: 10px solid $light-clu-purple;
+      }
     }
 
     p {
       color: #333;
       font-family: "Raleway";
       font-size: 1.3em;
-      padding: $base-padding;
+      padding: 80px $base-padding 0 $base-padding;
       width: 50%;
       align-items: center;
-
+      
       a {
         color: #1469b8;
       }
@@ -469,6 +474,11 @@ html {
       padding: $base-padding;
       width: 50%;
       align-items: center;
+
+      .Descriptor {
+        list-style: none;
+        padding: 0 0 20px 0;
+      }
     }
   }
 }

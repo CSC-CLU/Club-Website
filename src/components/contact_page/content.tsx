@@ -25,7 +25,7 @@ function ContactContent({officerList} : Props){
     return (
         <div className='content'>
             <div className="content-card">
-                <a href="https://discord.gg/S3UGxBWWMJ">
+                <a className = "image-container" href="https://discord.gg/S3UGxBWWMJ">
                     <img src="/discord_qr_code.png"></img>
                 </a>
 
@@ -34,7 +34,9 @@ function ContactContent({officerList} : Props){
                 </p>
 
                 <ul>
+                    <li className="Descriptor">
                     Feel free to reach out to the club or any one of our officers below with any questions too!
+                    </li>
                     {listElements}
                 </ul>
             </div>
