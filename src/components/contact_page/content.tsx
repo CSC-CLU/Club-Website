@@ -30,7 +30,7 @@ function ContactContent({officerList} : Props){
                 </a>
 
                 <p>
-                    If you are interested in becoming a part of our community, feel free to join our club Discord! Alternatively, you can drop by on Tuesdays at 6PM in <a href="https://www.callutheran.edu/map/">D8</a> for our weekly club meetings!
+                    If you are interested in becoming a part of our community, feel free to join our club Discord! Alternatively, you can drop by on Tuesdays at 6PM in <a href="https://www.callutheran.edu/map/d-building">D8</a> for our weekly club meetings!
                 </p>
 
                 <ul>
