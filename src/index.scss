@@ -1,6 +1,7 @@
 $clu-purple: #3B2360;
 $primary-color: #3e3e42;
 $secondary-color: #1e1e1e;
+$light-clu-purple: #6a4c92;
 
 $base-padding: 40px;
 $max-width: 1230px;
@@ -272,6 +273,69 @@ html {
       padding: $base-padding;
       width: 50%;
       display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.contact-page {
+  background-color: $light-clu-purple;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .header {
+    width: 100vw;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    h1 {
+      color: white;
+      font-family: "Raleway",Helvetica,Arial,sans-serif;
+      font-size: $h1-font-size;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .content {
+    width: $max-width;
+
+    .content-card{
+      padding: $base-padding 0px $base-padding 0px;
+      display: flex;
+      background-color: white;
+
+    }
+
+    img {
+      padding: calc($base-padding / 2);
+      width: 100%;
+      border: 10px solid $light-clu-purple;
+    }
+
+    p {
+      color: #333;
+      font-family: "Raleway";
+      font-size: 1.3em;
+      padding: $base-padding;
+      width: 50%;
+      align-items: center;
+
+      a {
+        color: #1469b8;
+      }
+    }
+
+    ul{
+      color: #333;
+      font-family: "Raleway";
+      font-size: 1.3em;
+      padding: $base-padding;
+      width: 50%;
       align-items: center;
     }
   }
