@@ -26,7 +26,7 @@ function ContactContent({officerList} : Props){
         <div className='content'>
             <div className="content-card">
                 <a href="https://discord.gg/S3UGxBWWMJ">
-                    <img src="src/content/assets/discord_qr_code.png"></img>
+                    <img src="/discord_qr_code.png"></img>
                 </a>
 
                 <p>
