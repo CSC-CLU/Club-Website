@@ -482,3 +482,66 @@ html {
     }
   }
 }
+
+.contact-page {
+  background-color: $clu-light-purple;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .header {
+    width: 100vw;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    h1 {
+      color: white;
+      font-family: "Raleway",Helvetica,Arial,sans-serif;
+      font-size: $h1-text-rem;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .content {
+    width: $max-width;
+
+    .content-card{
+      padding: $base-padding 0px $base-padding 0px;
+      display: flex;
+      background-color: white;
+
+    }
+
+    img {
+      padding: calc($base-padding / 2);
+      width: 100%;
+      border: 10px solid $clu-light-purple;
+    }
+
+    p {
+      color: #333;
+      font-family: "Raleway";
+      font-size: 1.3em;
+      padding: $base-padding;
+      width: 50%;
+      align-items: center;
+
+      a {
+        color: #1469b8;
+      }
+    }
+
+    ul{
+      color: #333;
+      font-family: "Raleway";
+      font-size: 1.3em;
+      padding: $base-padding;
+      width: 50%;
+      align-items: center;
+    }
+  }
+}
