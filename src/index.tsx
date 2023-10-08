@@ -1,12 +1,16 @@
 import React from "react";
 import {SetStateAction, useState} from "react";
 import {BrowserRouter as Router, Route, Routes, useNavigate} from "react-router-dom";
+
+import Navigation_Bar from "./components/nav_bar";
+import Footer from "./components/footer";
+
 import Home from "./pages/home";
 import Project from "./pages/project"
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import Navigation_Bar from "./components/nav_bar";
-import Projects_Content from "./content/projects_content";
+
+import Projects_Content from "../content/projects_content";
 
 function App() {
     const [nav_bar_title, setNavBarTitle] = useState<string>("Club Projects and Activities");
@@ -15,7 +19,7 @@ function App() {
         setNavBarTitle(new_title);
     };
 
-    let project_path: string = "";
+    // let project_path: string = "";
     let project_routes: any[] = [];
     for (let i = 0; i < Projects_Content.length; i++) {
         // project_path = "/:" + Projects_Content[i][1][1].replace(/\s/g, "-"); // Replace spaces with dashes for url
@@ -38,6 +42,8 @@ function App() {
                     <Route path="/contact" element={<Contact></Contact>}></Route>
                 </Routes>
             </Router>
+
+            <Footer></Footer>
         </div>
     );
 }

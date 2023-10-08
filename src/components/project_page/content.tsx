@@ -1,4 +1,4 @@
-import Projects_Content from "../../content/projects_content";
+import Projects_Content from "../../../content/projects_content";
 
 function Content() {
     let url: string = window.location.pathname;

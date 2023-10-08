@@ -1,12 +1,14 @@
-$clu-purple: #3B2360;
+$clu-purple: #3b2360;
+$clu-gold: #ffc222;
 $primary-color: #3e3e42;
 $secondary-color: #1e1e1e;
 $light-clu-purple: #6a4c92;
 
 $base-padding: 40px;
 $max-width: 1230px;
-$h1-font-size: 3.5rem;
-$paragraph-font-size: 1.3em;
+$h1-text-rem: 3.5rem;
+$small-text-em: 1.3em;
+$small-text-px: 16px;
 
 * {
   box-sizing: border-box;
@@ -72,6 +74,136 @@ html {
   }
 }
 
+.footer-container {
+  background-image: url(https://www.callutheran.edu/_resources/img/global/global-footer-bg-1.jpg);
+  background-position: center center;
+  // height: 585px;
+  display: flex;
+  justify-content: center;
+
+  .footer {
+    padding: 48px 0px 48px 0px;
+    width: $max-width;
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+
+      .col-1 {
+        img {
+          width: 100%;
+          height: auto;
+          margin: 0 0 1rem 0;
+          max-width: 150px;
+        }
+
+        address, p {
+          color: white;
+          font-family: "Raleway", Helvetica, Arial, sans-serif;
+          font-size: $small-text-px;
+          font-style: normal;
+        }
+
+        .phone-number {
+          font-size: 1rem;
+          line-height: 1.5em;
+          padding: 0 0 1em 0;
+        }
+
+        .apply-button {
+          background: #ffd589;
+          color: #6a4c92;
+          font-family: "Tungsten",impact, sans-serif;
+          font-size: 1.5rem;
+          font-weight: 100;
+          line-height: 1em;
+          letter-spacing: 0px;
+          text-align: center;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          border: 1px solid rgba(0,0,0,.3);
+          box-shadow: 0 5px 5px -5px rgba(0,0,0,.75);
+          transition: 50ms ease-in-out all;
+          display: inline-block;
+        }
+
+        .social-medias {
+          li {
+            .face-book::before {
+              font-family: "Font Awesome 5 Free";
+              content: "\f095";
+              display: inline-block;
+              padding-right: 3px;
+              vertical-align: middle;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+
+      h5 {
+        color: white;
+        font-family: "Raleway", Helvetica, Arial, sans-serif;
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 1.1em;
+        margin: 0 0 0.5rem 0;
+      }
+
+      li {
+        line-height: 1.5em;
+        list-style: none;
+        padding: 0.325rem 0;
+
+        a {
+          color: $clu-gold;
+          font-family: "Raleway";
+          font-size: $small-text-px;
+          text-decoration: none;
+        }
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .bottom-row {
+      border-top: 4px solid #6a4c92;
+      padding: 2rem 0 0 0;
+
+      p {
+        color: white;
+        font-family: "Raleway", Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        line-height: 1.5em;
+        padding: 0 0 1em 0;
+      }
+      
+      ul {
+        list-style-type:none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+
+          a {
+            color: $clu-gold;
+            font-family: "Raleway";
+            font-size: 0.9rem;
+            line-height: 1.5em;
+            list-style: none;
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
 .home-page {
   background-color: $primary-color;
   display: flex;
@@ -95,7 +227,7 @@ html {
       h1 {
         color: white;
         font-family: "Raleway",Helvetica,Arial,sans-serif;
-        font-size: $h1-font-size;
+        font-size: $h1-text-rem;
         font-weight: 700;
         line-height: normal;
       }
@@ -233,7 +365,7 @@ html {
       h1 {
         color: white;
         font-family: "Raleway",Helvetica,Arial,sans-serif;
-        font-size: $h1-font-size;
+        font-size: $h1-text-rem;
         font-weight: 700;
         line-height: normal;
       }
@@ -257,7 +389,7 @@ html {
     }
 
     img, iframe {
-      padding: calc($base-padding / 2);
+      margin: $base-padding;
       width: 50%;
     }
 
@@ -269,8 +401,8 @@ html {
     p {
       color: white;
       font-family: "Raleway";
-      font-size: 1.3em;
-      padding: $base-padding;
+      font-size: $small-text-em;
+      margin: $base-padding;
       width: 50%;
       display: flex;
       align-items: center;
