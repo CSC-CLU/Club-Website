@@ -415,7 +415,7 @@ html {
   }
 
   .introduction {
-    padding: 40px 0px;
+    padding: $base-padding 0 0 0;
     width: $max-width;
 
     .card-1, .card-2, .card-3, .card-4 {
@@ -453,31 +453,61 @@ html {
   }
 
   .content {
-    padding: 0 0 40px 0;
+    background-color: $clu-light-purple;
+    margin: $base-padding 0 $base-padding 0;
+    padding: 0 $base-padding $base-padding $base-padding;
     width: $max-width;
     display: flex;
+    flex-wrap: wrap;
+
+    h3 {
+      color: white;
+      font-family: "Raleway";
+      font-size: 26px;
+      font-weight: 700;
+      padding: calc($base-padding / 2) 0 0 0;
+      text-align: center;
+      width: 100%;
+    }
 
     .profile {
       background-color: $clu-light-gold;
       border-radius: 100vh;
+      margin: calc($base-padding / 2) 0 0 0;
       padding: 10px;
       display: flex;
 
       .left {
-        align-self: center;
-        
         .profile-image {
-          background-color: red;
           aspect-ratio: calc(1/1);
-          border-radius: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
           overflow: hidden;
-          width: 100px;
-        }
+          width: 125px;
+          border-radius: 100%;
+        }        
       }
 
       .right {
         padding: 0 $base-padding 0 $base-padding;
         align-self: top;
+
+        h5 {
+          align-items: center;
+          color: #333;
+          font-family: "Raleway";
+          font-size: 1.3em;
+          font-weight: 700;
+        }
+
+        p {
+          align-items: center;
+          color: black;
+          font-family: "Raleway";
+          font-size: $small-text-px;
+          padding: 5px 0 0 0;
+        }
       }
     }
   }

@@ -2,7 +2,7 @@ import About_Content from "../../../content/about_content";
 
 function Content() {
     let content_list: any[] = [];
-    for (let i = 0; i < About_Content.length; i += 4) {
+    for (let i = 0; i < About_Content.length; i++) {
         const image = About_Content[i][0];
         // const background_image = {
         //     backgroundImage: `url(${image})`
@@ -14,10 +14,10 @@ function Content() {
         content_list.push(
             <div className="profile">
                 <div className="left">
-                    {/* <div className="profile-image" style={background_image}></div> */}
-                    <div className="profile-image">
+                    <div className="profile-image" style={{backgroundImage: `url(${image})`}}></div>
+                    {/* <div className="profile-image">
                         <img src={image}></img>
-                    </div>
+                    </div> */}
                     {/* <h5>{name}</h5>
                     <p>{position}</p> */}
                 </div>
@@ -26,7 +26,7 @@ function Content() {
                     <p>{description}</p>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
