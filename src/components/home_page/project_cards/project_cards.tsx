@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
-import Projects_Content from "../../../content/projects_content";
+import Projects_Content from "../../../../content/projects_content";
 
-function Content() {
+function Project_Cards() {
     let content_list: any[] = [];
 
     for (let i = 0; i < Projects_Content.length; i++) {
@@ -35,4 +35,4 @@ function Content() {
     )
 }
 
-export default Content;
+export default Project_Cards;

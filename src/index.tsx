@@ -3,12 +3,11 @@ import {SetStateAction, useState} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 import Navigation_Bar from "./components/nav_bar";
-import Footer from "./components/footer";
 
 import Home from "./pages/home";
 import Project from "./pages/project"
-import About from "./pages/about";
-import Contact from "./pages/contact";
+import About from "./components/home_page/about_section/about";
+import Contact from "./components/home_page/contact_section/contact";
 
 import Projects_Content from "../content/projects_content";
 
@@ -40,8 +39,7 @@ function App() {
                     <Route path="/contact" element={<Contact></Contact>}></Route>
                 </Routes>
             </Router>
-
-            <Footer></Footer>
+            {/* <Contact></Contact> */}
         </div>
     );
 }

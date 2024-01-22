@@ -1,0 +1,28 @@
+@import '../../../index.scss';
+
+.landing-header {
+    background-image: url(https://sites.callutheran.edu/tug-programs/wp-content/uploads/sites/21/2021/03/computer-science-large.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    .image-overlay {
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-family: "Raleway", Helvetica, Arial, sans-serif;
+            font-size: $h1-text-rem;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+}

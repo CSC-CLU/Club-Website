@@ -1,6 +1,6 @@
-import About_Content from "../../../content/about_content";
+import About_Content from "../../../../content/board_content";
 
-function Content() {
+function Board_Officers() {
     let content_list: any[] = [];
     for (let i = 0; i < About_Content.length; i++) {
         const image = About_Content[i][0];
@@ -37,4 +37,4 @@ function Content() {
     )
 }
 
-export default Content;
+export default Board_Officers;

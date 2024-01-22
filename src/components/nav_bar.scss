@@ -1,0 +1,64 @@
+@import '../index.scss';
+
+.nav-container {
+    background-color: rgba(black, 0.5);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    .nav-bar {
+        width: $max-width;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                height: 45px;
+                display: flex;
+            }
+
+            h2 {
+                color: white;
+                font-family: "Raleway";
+                font-size: 30px;
+                padding-left: 32px;
+            }
+        }
+
+        .right {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            a {
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                font-family: "Raleway";
+                font-size: 17px;
+                font-weight: 700;
+                line-height: $base-padding;
+                padding: 0px 15px 0px 15px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $clu-gold;
+            }
+
+            // :last-child {
+            //     margin-right: -15px;
+            // }
+        }
+    }
+}

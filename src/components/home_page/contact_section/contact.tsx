@@ -1,6 +1,6 @@
-import Header from "../components/contact_page/header"
-import ContactContent from "../components/contact_page/content";
-import Officer_Contact_Info from "../../content/officer_contact_info"
+import Header from "./content_header"
+import ContactContent from "./contact_content";
+import Officer_Contact_Info from "../../../../content/officer_contact_info"
 
 function Contact() {
     return (
