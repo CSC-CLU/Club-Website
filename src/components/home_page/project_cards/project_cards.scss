@@ -1,7 +1,8 @@
 @import '../../../index.scss';
 
-.home-page {
-    background-color: $primary-color;
+.project_cards_page {
+    background-color: $background-color;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -10,7 +11,7 @@
         width: $max-width;
 
         .content-card {
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: white;
             margin: $base-padding 0px $base-padding 0px;
             display: flex;

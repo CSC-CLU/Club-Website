@@ -1,4 +1,4 @@
-import Board_Content from './board_officers'
+import Board_Content from './board_content'
 
 function Board() {
     return (

@@ -6,8 +6,8 @@ import Navigation_Bar from "./components/nav_bar";
 
 import Home from "./pages/home";
 import Project from "./pages/project"
-import About from "./components/home_page/about_section/about";
-import Contact from "./components/home_page/contact_section/contact";
+import About from "./components/home_page/about/about";
+import Contact from "./components/home_page/contact/contact";
 
 import Projects_Content from "../content/projects_content";
 

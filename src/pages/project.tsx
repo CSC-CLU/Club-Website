@@ -1,4 +1,4 @@
-import Content from "../components/project_page/content";
+import Content from "../components/project_page/projects_content";
 
 function Project() {
     return (

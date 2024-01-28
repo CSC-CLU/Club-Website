@@ -1,6 +1,6 @@
-function Header() {
+function Landing() {
     return (
-        <div className="landing-header">
+        <div className="landing-page">
             <div className="image-overlay">
                 <h1>Computer Science Club</h1>
             </div>
@@ -8,4 +8,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Landing;
