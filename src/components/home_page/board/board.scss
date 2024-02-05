@@ -24,44 +24,70 @@
             width: 100%;
         }
 
-        .profile {
-            background-color: white;
-            border-radius: 100vh;
+        .profile-container {
             margin: calc($base-padding / 2) 0 0 0;
-            padding: 10px;
-            display: flex;
-
-            .left {
-                .profile-image {
-                    aspect-ratio: calc(1/1);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    overflow: hidden;
-                    width: 125px;
+            margin: $base-padding;
+            width: 100%;
+        
+            .profile {
+                background-color: white;
+                border-radius: calc(infinity * 1px);
+                padding: $base-padding;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+        
+                max-width: calc(125px + ($base-padding / 2));
+                max-height: calc(125px + ($base-padding / 2));
+                transition: 0.5s;
+        
+                .left {
                     border-radius: 100%;
+                    width: 100%;
+        
+                    .profile-image {
+                        aspect-ratio: calc(1/1);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        margin: calc($base-padding * -0.75) 0 0 calc($base-padding * -0.75);
+                        width: 125px;
+                        border-radius: 50%;
+                    }
+                }
+        
+                .right {
+                    position: absolute;
+                    top: calc($base-padding / 4);
+                    left: calc(125px + ($base-padding * 0.75));
+                    padding: 0 $base-padding 0 $base-padding;
+                    width: calc($max-width - ($base-padding * 4) - 125px);
+                    transition: opacity 0.5s;
+        
+                    h5, p {
+                        align-items: center;
+                        color: #333;
+                        font-family: "Raleway";
+                        font-weight: 700;
+                    }
+        
+                    h5 {
+                        font-size: 1.3em;
+                    }
+        
+                    p {
+                        font-size: $small-text-px;
+                        padding: 5px 0 0 0;
+                        width: 100%;
+                    }
                 }
             }
-
-            .right {
-                padding: 0 $base-padding 0 $base-padding;
-                align-self: top;
-
-                h5 {
-                    align-items: center;
-                    color: #333;
-                    font-family: "Raleway";
-                    font-size: 1.3em;
-                    font-weight: 700;
-                }
-
-                p {
-                    align-items: center;
-                    color: black;
-                    font-family: "Raleway";
-                    font-size: $small-text-px;
-                    padding: 5px 0 0 0;
-                }
+        }
+        
+        .profile-container:hover {
+            .profile {
+                max-width: 100%;
+                max-height: auto;
             }
         }
     }

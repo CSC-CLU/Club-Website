@@ -15,7 +15,7 @@ const about_content: string[][] = [
         "/demo_img.png",
         "Person 1",
         "Club President",
-        "I am the Club President! With my algorithm and software development work, I’m able to bring real-life experience in a very exciting technical field to the classroom. This engages and motivates my students, letting them know that if they work hard, there are fun and lucrative careers waiting them upon graduation."
+        "I am the Club President! With my algorithm and software development work, I’m able to bring real-life experience in a very exciting technical field to the classroom. This engages and motivates my students, letting them know that if they work hard, there are fun and lucrative careers waiting them upon graduation. I am the Club President! With my algorithm and software development work, I’m able to bring real-life experience in a very exciting technical field to the classroom. This engages and motivates my students, letting them know that if they work hard, there are fun and lucrative careers waiting them upon graduation."
     ],
 
     [ 

@@ -12,18 +12,20 @@ function Board_Content() {
         const description = About_Content[i][3];
 
         content_list.push(
-            <div className="profile">
-                <div className="left">
-                    <div className="profile-image" style={{backgroundImage: `url(${image})`}}></div>
-                    {/* <div className="profile-image">
-                        <img src={image}></img>
-                    </div> */}
-                    {/* <h5>{name}</h5>
-                    <p>{position}</p> */}
-                </div>
-                <div className="right">
-                    <h5>{`${name} - ${position}`}</h5>
-                    <p>{description}</p>
+            <div className="profile-container">
+                <div className="profile">
+                    <div className="left">
+                        <div className="profile-image" style={{backgroundImage: `url(${image})`}}></div>
+                        {/* <div className="profile-image">
+                            <img src={image}></img>
+                        </div> */}
+                        {/* <h5>{name}</h5>
+                        <p>{position}</p> */}
+                    </div>
+                    <div className="right">
+                        <h5>{`${name} - ${position}`}</h5>
+                        <p>{description}</p>
+                    </div>
                 </div>
             </div>
         );
