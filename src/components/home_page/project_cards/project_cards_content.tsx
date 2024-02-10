@@ -12,19 +12,31 @@ function Project_Cards() {
         const description: string = Projects_Content[i][0][2];
 
         content_list.push(
-            <div className="content-card">
-                <Link to={path }>
+            // <div className="content-card">
+            //     <Link to={path }>
+            //         <img src={image} alt={title}></img>
+            //     </Link>
+            //     <div className="info">
+            //         <h3>
+            //             <Link to={path}>
+            //                 {title}
+            //             </Link>
+            //         </h3>
+            //         <p>{description}</p>
+            //     </div>
+            // </div>
+
+            <Link to={path}>
+                <div className="content-card">
                     <img src={image} alt={title}></img>
-                </Link>
-                <div className="info">
-                    <h3>
-                        <Link to={path}>
+                    <div className="info">
+                        <h3>
                             {title}
-                        </Link>
-                    </h3>
-                    <p>{description}</p>
+                        </h3>
+                        <p>{description}</p>
+                    </div>
                 </div>
-            </div>
+            </Link>
         );
     }
 

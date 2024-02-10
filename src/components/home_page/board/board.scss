@@ -14,19 +14,18 @@
         display: flex;
         flex-wrap: wrap;
 
-        h3 {
+        h2 {
             color: white;
             font-family: "Raleway";
-            font-size: 26px;
+            font-size: $h1-text-rem;
             font-weight: 700;
-            padding: calc($base-padding / 2) 0 0 0;
+            padding: calc($base-padding / 2) 0 calc($base-padding / 2) 0;
             text-align: center;
             width: 100%;
         }
 
         .profile-container {
             margin: calc($base-padding / 2) 0 0 0;
-            margin: $base-padding;
             width: 100%;
         
             .profile {
@@ -37,8 +36,8 @@
                 overflow: hidden;
                 display: flex;
         
-                max-width: calc(125px + ($base-padding / 2));
-                max-height: calc(125px + ($base-padding / 2));
+                max-width: 9rem;
+                max-height: 9rem;
                 transition: 0.5s;
         
                 .left {
@@ -50,18 +49,18 @@
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
-                        margin: calc($base-padding * -0.75) 0 0 calc($base-padding * -0.75);
-                        width: 125px;
+                        margin: -2rem 0 0 -2rem;
+                        width: 8rem;
                         border-radius: 50%;
                     }
                 }
         
                 .right {
                     position: absolute;
-                    top: calc($base-padding / 4);
-                    left: calc(125px + ($base-padding * 0.75));
-                    padding: 0 $base-padding 0 $base-padding;
-                    width: calc($max-width - ($base-padding * 4) - 125px);
+                    top: 0.5rem;
+                    left: 9rem;
+                    padding: 0 1rem 0 1rem;
+                    width: calc($max-width - 20rem);
                     transition: opacity 0.5s;
         
                     h5, p {
@@ -72,13 +71,18 @@
                     }
         
                     h5 {
-                        font-size: 1.3em;
+                        font-size: 1.5rem;
                     }
         
                     p {
-                        font-size: $small-text-px;
+                        background-color: white;
+                        font-size: 1rem;
                         padding: 5px 0 0 0;
                         width: 100%;
+
+                        hyphens: auto;
+                        text-align: justify;
+                        word-wrap: break-word;
                     }
                 }
             }
@@ -87,7 +91,6 @@
         .profile-container:hover {
             .profile {
                 max-width: 100%;
-                max-height: auto;
             }
         }
     }

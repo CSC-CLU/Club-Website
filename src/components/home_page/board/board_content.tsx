@@ -33,7 +33,7 @@ function Board_Content() {
 
     return (
         <div className="content">
-            <h3>Club Officers</h3>
+            <h2>Club Officers</h2>
             {content_list}
         </div>
     )

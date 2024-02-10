@@ -10,46 +10,53 @@
     .content {
         width: $max-width;
 
-        .content-card {
-            background-color: $primary-color;
-            color: white;
-            margin: $base-padding 0px $base-padding 0px;
-            display: flex;
+        a {
+            text-decoration: none;
 
-            a {
+            .content-card {
+                background-color: $primary-color;
+                color: white;
+                margin: $base-padding 0px $base-padding 0px;
                 display: flex;
-
+                transition: 0.25s ease-in-out;
+                
                 img {
                     width: 300px;
                     height: 300px;
                 }
-            }
 
-            .info {
-                width: 100%;
-
-                h3 {
+                .info {
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
 
-                    a {
+                    h3 {
                         color: white;
                         font-family: "Raleway";
-                        font-size: 26px;
+                        font-size: 2rem;
                         font-weight: 700;
                         text-align: center;
                         text-decoration: none;
                         padding: 20px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    p {
+                        // font-family: "Courier";
+                        font-family: "Raleway";
+                        font-size: 1rem;
+                        padding: calc($base-padding / 2);
+
+                        hyphens: auto;
+                        text-align: justify;
+                        word-wrap: break-word;
                     }
                 }
+            }
 
-                p {
-                    // font-family: "Courier";
-                    font-family: "Raleway";
-                    font-size: 1.3em;
-                    padding: 0px $base-padding 0px $base-padding;
-                }
+            .content-card:hover {
+                scale: 1.05;
+                filter: brightness(1.25)
             }
         }
     }
