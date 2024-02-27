@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import Projects_Content from "../../../../content/projects_content";
+import FadeInUp from '../../fade_in_up';
 
 function Project_Cards() {
     let content_list: any[] = [];
@@ -26,17 +27,19 @@ function Project_Cards() {
             //     </div>
             // </div>
 
-            <Link to={path}>
-                <div className="content-card">
-                    <img src={image} alt={title}></img>
-                    <div className="info">
-                        <h3>
-                            {title}
-                        </h3>
-                        <p>{description}</p>
+            <FadeInUp>
+                <Link to={path}>
+                    <div className="content-card">
+                        <img src={image} alt={title}></img>
+                        <div className="info">
+                            <h3>
+                                {title}
+                            </h3>
+                            <p>{description}</p>
+                        </div>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            </FadeInUp>
         );
     }
 

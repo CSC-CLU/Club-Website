@@ -1,4 +1,5 @@
 import About_Content from "../../../../content/board_content";
+import ScrollAnimation from "./scroll_animation";
 
 function Board_Content() {
     let content_list: any[] = [];
@@ -13,7 +14,7 @@ function Board_Content() {
 
         content_list.push(
             <div className="profile-container">
-                <div className="profile">
+                <ScrollAnimation>
                     <div className="left">
                         <div className="profile-image" style={{backgroundImage: `url(${image})`}}></div>
                         {/* <div className="profile-image">
@@ -26,7 +27,7 @@ function Board_Content() {
                         <h5>{`${name} - ${position}`}</h5>
                         <p>{description}</p>
                     </div>
-                </div>
+                </ScrollAnimation>
             </div>
         );
     }

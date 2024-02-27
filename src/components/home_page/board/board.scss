@@ -88,8 +88,22 @@
             }
         }
         
-        .profile-container:hover {
-            .profile {
+        // .profile-container:hover {
+        //     .profile {
+        //         max-width: 100%;
+        //     }
+        // }
+
+        .profile.animate {
+            animation: extend-profile 1s ease forwards;
+        }
+        
+        @keyframes extend-profile {
+            0% {
+                max-width: 9rem;
+            }
+        
+            100% {
                 max-width: 100%;
             }
         }

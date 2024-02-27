@@ -1,10 +1,13 @@
 import Board_Content from './board_content'
+import FadeInUp from '../../fade_in_up';
 
 function Board() {
     return (
-        <div className="board-page">
-            <Board_Content></Board_Content>
-        </div>
+        <FadeInUp>
+            <div className="board-page">
+                <Board_Content></Board_Content>
+            </div>
+        </FadeInUp>
     )
 }
 
