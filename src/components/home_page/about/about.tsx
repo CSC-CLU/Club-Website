@@ -3,7 +3,7 @@ import FadeInUp from '../../fade_in_up';
 function About() {
     return (
         <FadeInUp>
-            <div className="about-page">
+            <div className="about-page" id="about">
                 <div className="about-container">
 
                     <h2>About Us</h2>

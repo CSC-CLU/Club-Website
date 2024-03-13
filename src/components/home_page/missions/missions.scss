@@ -3,8 +3,10 @@
 .missions-page {
     background-color: $background-color;
     width: 100%;
+    height: calc(100vh - $nav-bar-height);
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 
     .mission-cards {
@@ -21,7 +23,7 @@
             font-size: $h1-text-rem;
             font-weight: 700;
             line-height: normal;
-            margin: calc(6.25rem + $base-padding) $base-padding $base-padding $base-padding;
+            margin: $base-padding $base-padding $base-padding $base-padding;
             text-align: center;
             width: 100%;
         }

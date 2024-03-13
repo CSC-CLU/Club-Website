@@ -5,7 +5,7 @@
     backdrop-filter: blur(3px);
     position: fixed;
     width: 100vw;
-    height: 100px;
+    height: $nav-bar-height;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +54,7 @@
 
             a:hover {
                 color: $accent-color;
+                cursor: pointer;
             }
 
             // :last-child {

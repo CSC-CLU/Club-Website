@@ -30,6 +30,8 @@ $h1-text-rem: 3.5rem;
 $small-text-em: 1.3em;
 $small-text-px: 16px;
 
+$nav-bar-height: 60px;
+
 html {
   background-color: $background-color;
 }
@@ -39,5 +41,5 @@ html {
   padding: 0;
   margin: 0;
 
-  outline: 1px solid #f00 !important;
+  // outline: 1px solid #f00 !important; 
 }

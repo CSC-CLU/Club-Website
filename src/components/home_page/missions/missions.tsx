@@ -3,7 +3,7 @@ import FadeInUp from "../../fade_in_up";
 function Missions() {
     return (
         <FadeInUp>
-            <div className="missions-page">
+            <div className="missions-page" id="missions">
                 <div className="mission-cards">
                     <h2>Our Mission</h2>
 

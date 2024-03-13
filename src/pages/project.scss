@@ -1,12 +1,13 @@
 @import '../index.scss';
 
 .project-page {
-    background-color: $primary-color;
+    background-color: $background-color;
+    padding-top: $nav-bar-height;
     display: flex;
     justify-content: center;
 
     .content {
-        background-color: $secondary-color;
+        background-color: $primary-color;
         width: $max-width;
 
         h3 {
