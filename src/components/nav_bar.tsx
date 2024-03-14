@@ -16,7 +16,7 @@ function Navigation_Bar({nav_bar_title, onNavLinkClick}: Navigation_Bar_Props)  
                 const navbarHeight = document.querySelector('.nav-bar')?.clientHeight || 0;
                 const computedStyles = window.getComputedStyle(element);
                 const paddingTop = parseInt(computedStyles.paddingTop, 10) || 0;
-                const scrollOffset = paddingTop + (navbarHeight / 2.75); // Add additional offset if needed
+                const scrollOffset = paddingTop + (navbarHeight / 3); // Add additional offset if needed
                 const scrollToPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - scrollOffset;
                 window.scrollTo({
                     top: scrollToPosition,
